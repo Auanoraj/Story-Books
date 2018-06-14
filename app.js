@@ -10,6 +10,10 @@ const auth = require('./routes/auth');
 
 app.use('/auth', auth);
 
+app.get('/', (res, req) => {
+    res.send('It works');
+})
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
